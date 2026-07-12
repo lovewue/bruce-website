@@ -1,17 +1,15 @@
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | Bruce Greenhalgh</title>
 <meta name="description" content="Get in touch with Bruce Greenhalgh about therapy, mindfulness, supervision, retreats, or organisational support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="index.html" class="brand">
-      <img src="images/logo-mark.png" alt="Bruce Greenhalgh logo mark">
-      <span class="brand-text">
-        <span class="name">Bruce Greenhalgh</span>
-        <span class="tag">Mindful Consultant Services</span>
-      </span>
-    </a>
+    <a href="index.html" class="wordmark">Bruce Greenhalgh</a>
     <nav class="main-nav">
       <ul>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -38,6 +36,14 @@
         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="header-right">
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+      </div>
+      <img class="logo-mark" src="images/logo-mark.png" alt="Bruce Greenhalgh sailboat logo">
+    </div>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -45,15 +51,11 @@
 </header>
 
 <main>
-  <section class="hero hero-page" style="background-image: url('images/contact-coastpath.png');">
-    <div class="hero-inner">
-      <p class="eyebrow">Contact</p>
-      <h1>Get in touch</h1>
-    </div>
-  </section>
-
-  <section>
-    <div class="container contact-grid">
+  <section class="contact-hero" style="background-image: url('images/contact-coastpath.png');">
+    <p class="hero-tagline">Mindful Consultant Services</p>
+    <div class="contact-form-card">
+      <span class="corner-accent"></span>
+      <h1>Contact</h1>
       <form class="contact-form" novalidate>
         <div class="form-row">
           <div class="form-field">
@@ -73,30 +75,9 @@
           <label for="message">Message / Enquiry (required)</label>
           <textarea id="message" name="message" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn">Submit</button>
         <p class="form-status" role="status" style="margin-top:1rem; color: var(--ink-muted);"></p>
       </form>
-
-      <aside>
-        <div class="contact-card">
-          <h3>Bruce Greenhalgh</h3>
-          <p class="meta">
-            brucegreenhalgh.com<br>
-            bruce@brucegreenhalgh.com
-          </p>
-          <p class="meta">&copy; 2026 Bruce Greenhalgh. All rights reserved.</p>
-        </div>
-        <div class="panel" style="margin-top: 1.6rem;">
-          <p class="eyebrow">Retreats &amp; Offsites</p>
-          <h3>Looking for a team event?</h3>
-          <ul class="plain-list">
-            <li><strong>Team events:</strong> structured days designed to bring a team together away from the day-to-day.</li>
-            <li><strong>Leadership retreats:</strong> reflective space for leadership groups to step back and think clearly.</li>
-            <li><strong>Bespoke retreats:</strong> fully custom-designed to a specific brief, when something off-the-shelf won't fit.</li>
-          </ul>
-          <a href="organisations.html#retreats-offsites" class="btn btn-outline" style="margin-top:1.2rem;">More on Retreats &amp; Offsites</a>
-        </div>
-      </aside>
     </div>
   </section>
 </main>
@@ -104,15 +85,13 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-col footer-brand">
-        <a href="index.html" class="brand">
-          <img src="images/logo-mark.png" alt="Bruce Greenhalgh logo mark">
-          <span class="brand-text">
-            <span class="name">Bruce Greenhalgh</span>
-            <span class="tag">Mindful Consultant Services</span>
-          </span>
-        </a>
-        <p>Psychotherapist, mindfulness teacher, and consultant supporting individuals and organisations to meet what's difficult with clarity and steadiness.</p>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Bruce</a></li>
+          <li><a href="retreats.html">Retreats</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
       <div class="footer-col">
         <h4>Individual</h4>
@@ -134,28 +113,21 @@
           <li><a href="organisations.html#training">Training</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About Bruce</a></li>
-          <li><a href="retreats.html">Retreats</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <p class="meta">
-          Bruce Greenhalgh<br>
-          brucegreenhalgh.com<br>
-          bruce@brucegreenhalgh.com
-        </p>
+      <div class="footer-col footer-brand">
+        <img class="logo-mark" src="images/logo-mark.png" alt="Bruce Greenhalgh sailboat logo">
+        <div>
+          <h4>Bruce Greenhalgh</h4>
+          <a href="index.html">brucegreenhalgh.com</a><br>
+          <a href="mailto:bruce@brucegreenhalgh.com">bruce@brucegreenhalgh.com</a>
+          <p class="meta">&copy; 2026 Bruce Greenhalgh. All rights reserved.</p>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Bruce Greenhalgh. All rights reserved.</span>
-      <div class="legal-links">
-        <a href="contact.html">Contact</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms.html">Terms &amp; Conditions</a>
-        <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
-      </div>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
     </div>
   </div>
 </footer>
