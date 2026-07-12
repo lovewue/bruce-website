@@ -142,13 +142,16 @@ section { padding: 4.5rem 0; }
 .mega a:hover { background: var(--grey-bg); }
 
 .header-right { display: flex; align-items: center; gap: 1.4rem; flex-shrink: 0; }
-.social-icons { display: flex; gap: 0.5rem; }
+.social-icons { display: flex; gap: 0.4rem; }
 .social-icons a {
-  width: 26px; height: 26px; border-radius: 50%;
-  background: #d9d9d9; color: var(--white);
+  width: 30px; height: 30px; border-radius: 6px;
+  background: var(--white); color: var(--navy);
+  box-shadow: 0 1px 4px rgba(21, 96, 130, 0.25);
   display: flex; align-items: center; justify-content: center;
-  font-size: 0.75rem;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
+.social-icons a:hover { background: var(--orange); color: var(--white); transform: translateY(-1px); }
+.social-icons svg { width: 16px; height: 16px; fill: currentColor; }
 .header-right .logo-mark { width: 46px; height: auto; }
 
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.4rem; }
@@ -335,28 +338,46 @@ section { padding: 4.5rem 0; }
 .col-panel li:last-child { margin-bottom: 0; }
 
 /* ---------- About page ---------- */
-.about-hero-overlap {
-  position: relative;
-  margin-top: -140px;
-}
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
 }
-.about-grid > div { padding: 2.8rem; }
+.about-grid > .bg-teal { padding: 2.8rem; }
 .about-grid .bg-teal { background: var(--teal); color: var(--white); }
 .about-grid .bg-teal h2 { color: var(--white); }
 .about-grid .bg-teal a { color: var(--white); text-decoration: underline; }
-.about-grid .bg-sky { color: var(--ink); }
-.about-grid img { width: 100%; height: 100%; object-fit: cover; }
-.about-grid .col-photo { padding: 0; min-height: 300px; }
+
+/* framed photo + overlapping panel (My Story) */
+.framed-col {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.framed-col .framed-photo {
+  width: 65%;
+  border: 8px solid var(--white);
+  box-shadow: var(--shadow);
+  display: block;
+}
+.framed-col .overlap-panel {
+  width: 100%;
+  margin-top: -40px;
+  padding: 3.4rem 2.8rem 2.8rem;
+  position: relative;
+  z-index: 2;
+  color: var(--ink);
+}
 
 .qualifications-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.qualifications-grid > div { padding: 2.8rem; }
+.qualifications-grid > .bg-sky { padding: 2.8rem; }
 .qualifications-grid ul { padding-left: 1.2em; margin: 0; }
 .qualifications-grid li { margin-bottom: 0.7em; }
 .qualifications-grid h3 { margin-top: 1.6rem; }
@@ -364,6 +385,17 @@ section { padding: 4.5rem 0; }
 .badge-row { display: flex; gap: 1.6rem; margin-top: 1.4rem; align-items: center; flex-wrap: wrap; }
 .badge-row img { height: 52px; width: auto; }
 .org-list { margin-top: 0.5rem; }
+
+/* plain photo with large overlapping panel (Who I Work With) */
+.photo-overlap { position: relative; }
+.photo-overlap > img { width: 100%; display: block; }
+.photo-overlap .overlap-panel {
+  position: relative;
+  z-index: 2;
+  margin-top: -190px;
+  padding: 2.6rem 2.8rem;
+}
+.photo-plain img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .logo-strip { display: flex; gap: 2rem; margin-top: 1.2rem; flex-wrap: wrap; align-items: center; }
 .logo-strip img { height: 30px; width: auto; }
 
@@ -495,8 +527,10 @@ textarea { resize: vertical; min-height: 130px; }
   .about-band, .about-grid, .qualifications-grid, .booking-panel, .service-row, .service-row.alt { grid-template-columns: 1fr; }
   .service-row .col-drop, .service-row.alt .col-drop { order: 1; }
   .service-row .col-panel, .service-row.alt .col-panel { order: 2; }
-  .about-grid .col-photo { min-height: 220px; }
-  .about-hero-overlap { margin-top: 0; }
+  .framed-col { padding: 1.5rem 1.5rem 0; align-items: center; }
+  .framed-col .framed-photo { width: 85%; }
+  .framed-col .overlap-panel { margin-top: -30px; padding: 2.4rem 1.6rem 2rem; }
+  .photo-overlap .overlap-panel { margin-top: -80px; padding: 2rem 1.6rem; }
   .retreat-gallery { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
