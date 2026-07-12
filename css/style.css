@@ -268,12 +268,18 @@ section { padding: 4.5rem 0; }
 .photo-cta .label { position: relative; color: var(--white); }
 .photo-cta .label .eyebrow { display: block; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.3em; }
 .photo-cta .label h2 { color: var(--white); margin: 0; }
-.photo-cta .btn-wrap { position: absolute; bottom: 2rem; right: 2.5rem; }
+
+.photo-cta-band {
+  background: var(--white);
+  padding: 1.8rem 0;
+  display: flex;
+  justify-content: center;
+}
 
 /* ---------- Credentials strip ---------- */
 .credentials-strip {
   background: var(--grey-bg);
-  padding: 2.2rem 0;
+  padding: 2.6rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -281,6 +287,7 @@ section { padding: 4.5rem 0; }
   flex-wrap: wrap;
 }
 .credentials-strip img { height: 48px; width: auto; }
+.credentials-gap { background: var(--white); padding: 1.2rem 0; }
 
 /* ---------- Zigzag service rows (Individuals / Organisations) ---------- */
 .service-row {
