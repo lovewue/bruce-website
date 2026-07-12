@@ -338,66 +338,227 @@ section { padding: 4.5rem 0; }
 .col-panel li:last-child { margin-bottom: 0; }
 
 /* ---------- About page ---------- */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: stretch;
-}
-.about-grid > .bg-teal { padding: 2.8rem; }
-.about-grid .bg-teal { background: var(--teal); color: var(--white); }
-.about-grid .bg-teal h2 { color: var(--white); }
-.about-grid .bg-teal a { color: var(--white); text-decoration: underline; }
 
-/* framed photo + overlapping panel (My Story) */
-.framed-col {
-  position: relative;
+/*
+   Desktop layout follows the supplied editorial reference:
+   sea background, overlapping portrait and panels, followed by
+   a two-column qualifications / Greece composition.
+*/
+
+.hero {
+  min-height: 430px;
+  padding: 1.6rem 0 0;
   background-size: cover;
   background-position: center;
-  padding: 2rem 2rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 }
-.framed-col .framed-photo {
-  width: 65%;
-  border: 8px solid var(--white);
-  box-shadow: var(--shadow);
-  display: block;
+
+.hero-title {
+  display: none;
 }
-.framed-col .overlap-panel {
-  width: 100%;
-  margin-top: -40px;
-  padding: 3.4rem 2.8rem 2.8rem;
+
+.hero-tagline {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 0 42px;
+  font-size: 1rem;
+}
+
+/* First composition: My Approach, portrait and My Story */
+.about-grid {
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 44%) minmax(0, 56%);
+  align-items: start;
+  width: min(calc(100% - 64px), 1440px);
+  margin: -285px auto 0;
+}
+
+.about-grid > .bg-teal {
+  position: relative;
+  z-index: 3;
+  margin-top: 105px;
+  padding: 34px 32px 40px;
+  background: var(--teal);
+  color: var(--white);
+}
+
+.about-grid > .bg-teal h2 {
+  color: var(--ink);
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.about-grid > .bg-teal p:last-child {
+  margin-bottom: 0;
+}
+
+/* Portrait and story column */
+.framed-col {
+  position: relative;
+  min-width: 0;
+  min-height: 775px;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.framed-col .framed-photo {
+  position: relative;
+  z-index: 4;
+  width: min(44%, 330px);
+  margin: 0 11% 0 auto;
+  border: 8px solid var(--white);
+  box-shadow: 10px 10px 0 rgba(255, 255, 255, 0.72);
+}
+
+.framed-col .overlap-panel {
+  position: relative;
+  z-index: 3;
+  width: 88%;
+  margin: -32px 0 0 auto;
+  padding: 30px 44px 34px;
+  background: var(--sky);
   color: var(--ink);
 }
 
+.framed-col .overlap-panel h2 {
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.framed-col .overlap-panel p:last-child {
+  margin-bottom: 0;
+}
+
+/* Second composition */
 .qualifications-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 48%) minmax(0, 52%);
+  grid-template-rows: auto auto;
+  width: min(calc(100% - 32px), 1440px);
+  margin: 0 auto;
+  align-items: stretch;
 }
-.qualifications-grid > .bg-sky { padding: 2.8rem; }
-.qualifications-grid ul { padding-left: 1.2em; margin: 0; }
-.qualifications-grid li { margin-bottom: 0.7em; }
-.qualifications-grid h3 { margin-top: 1.6rem; }
-.qualifications-grid h3:first-child { margin-top: 0; }
-.badge-row { display: flex; gap: 1.6rem; margin-top: 1.4rem; align-items: center; flex-wrap: wrap; }
-.badge-row img { height: 52px; width: auto; }
-.org-list { margin-top: 0.5rem; }
 
-/* plain photo with large overlapping panel (Who I Work With) */
-.photo-overlap { position: relative; }
-.photo-overlap > img { width: 100%; display: block; }
-.photo-overlap .overlap-panel {
-  position: relative;
-  z-index: 2;
-  margin-top: -190px;
-  padding: 2.6rem 2.8rem;
+.qualifications-grid > div {
+  min-width: 0;
 }
-.photo-plain img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.logo-strip { display: flex; gap: 2rem; margin-top: 1.2rem; flex-wrap: wrap; align-items: center; }
-.logo-strip img { height: 30px; width: auto; }
+
+.qualifications-grid > .bg-sky {
+  padding: 38px 48px 42px;
+  background: var(--sky);
+}
+
+.qualifications-grid h3 {
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+.qualifications-grid h3:not(:first-child) {
+  margin-top: 32px;
+}
+
+.qualifications-grid ul {
+  margin: 0;
+  padding-left: 1.35em;
+}
+
+.qualifications-grid li {
+  margin-bottom: 14px;
+  padding-left: 5px;
+}
+
+.qualifications-grid li:last-child {
+  margin-bottom: 0;
+}
+
+/* Coast image and Who I Work With overlay */
+.photo-overlap {
+  position: relative;
+  min-height: 610px;
+  overflow: hidden;
+}
+
+.photo-overlap > img {
+  width: 100%;
+  height: 100%;
+  min-height: 610px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-overlap .overlap-panel {
+  position: absolute;
+  z-index: 2;
+  top: 66px;
+  right: 0;
+  width: 92%;
+  margin: 0;
+  padding: 32px 48px 34px;
+  background: var(--teal);
+  color: var(--white);
+}
+
+.photo-overlap .overlap-panel h3 {
+  color: var(--ink);
+}
+
+.photo-overlap .overlap-panel p:last-child {
+  margin-bottom: 0;
+}
+
+/* Bougainvillea image */
+.qualifications-grid > div:nth-child(3) {
+  min-height: 500px;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.qualifications-grid > div:nth-child(3) img {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Outside of Work panel */
+.qualifications-grid > .bg-sky:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 500px;
+  padding: 54px 64px;
+}
+
+.qualifications-grid > .bg-sky:last-child p {
+  max-width: 580px;
+}
+
+.qualifications-grid > .bg-sky:last-child p:last-child {
+  margin-bottom: 0;
+}
+
+.org-list {
+  margin-top: 0.4rem;
+}
+
+/* About-page typography */
+.about-grid p,
+.qualifications-grid p,
+.qualifications-grid li {
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.55;
+}
+
+.about-grid h2 {
+  font-size: clamp(1.65rem, 2.7vw, 2.15rem);
+}
+
+.qualifications-grid h3 {
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+}
 
 /* ---------- Retreats page ---------- */
 .retreat-title-band {
@@ -513,33 +674,239 @@ textarea { resize: vertical; min-height: 130px; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .main-nav { position: fixed; inset: 0 0 0 auto; width: min(320px, 85vw); background: var(--white); flex-direction: column; align-items: flex-start; padding: 5.5rem 1.8rem 2rem; box-shadow: -12px 0 30px rgba(0,0,0,0.15); transform: translateX(100%); transition: transform 0.3s ease; z-index: 90; }
-  .main-nav.open { transform: translateX(0); }
-  .main-nav > ul { flex-direction: column; gap: 0.3rem; width: 100%; }
-  .nav-item { width: 100%; }
-  .mega { position: static; transform: none; box-shadow: none; display: none; width: 100%; padding: 0.3rem 0 0.6rem 0.8rem; }
-  .nav-item:hover .mega, .nav-item:focus-within .mega { display: none; }
-  .nav-item.open .mega { display: flex; }
-  .nav-toggle { display: block; }
+  .main-nav {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(320px, 85vw);
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5.5rem 1.8rem 2rem;
+    box-shadow: -12px 0 30px rgba(0,0,0,0.15);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 90;
+  }
 
-  .split-cta { grid-template-columns: 1fr; }
-  .split-cta .tile-inner { text-align: left; margin-left: 0; }
-  .about-band, .about-grid, .qualifications-grid, .booking-panel, .service-row, .service-row.alt { grid-template-columns: 1fr; }
-  .service-row .col-drop, .service-row.alt .col-drop { order: 1; }
-  .service-row .col-panel, .service-row.alt .col-panel { order: 2; }
-  .framed-col { padding: 1.5rem 1.5rem 0; align-items: center; }
-  .framed-col .framed-photo { width: 85%; }
-  .framed-col .overlap-panel { margin-top: -30px; padding: 2.4rem 1.6rem 2rem; }
-  .photo-overlap .overlap-panel { margin-top: -80px; padding: 2rem 1.6rem; }
-  .retreat-gallery { grid-template-columns: 1fr 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .contact-form-card { padding: 2rem 1.5rem 2.5rem; margin: 2rem 1rem 0; }
+  .main-nav.open {
+    transform: translateX(0);
+  }
+
+  .main-nav > ul {
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .mega {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    display: none;
+    width: 100%;
+    padding: 0.3rem 0 0.6rem 0.8rem;
+  }
+
+  .nav-item:hover .mega,
+  .nav-item:focus-within .mega {
+    display: none;
+  }
+
+  .nav-item.open .mega {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .split-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .split-cta .tile-inner {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .about-band,
+  .booking-panel,
+  .service-row,
+  .service-row.alt {
+    grid-template-columns: 1fr;
+  }
+
+  .service-row .col-drop,
+  .service-row.alt .col-drop {
+    order: 1;
+  }
+
+  .service-row .col-panel,
+  .service-row.alt .col-panel {
+    order: 2;
+  }
+
+  /* About page */
+  .hero {
+    min-height: 270px;
+    padding: 1.3rem 0 0;
+  }
+
+  .hero-tagline {
+    padding: 0 24px;
+  }
+
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: -120px 0 0;
+  }
+
+  .about-grid > .bg-teal {
+    order: 1;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    padding: 30px 24px;
+  }
+
+  .framed-col {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 0;
+    padding: 30px 20px 0;
+    background-position: center;
+  }
+
+  .framed-col .framed-photo {
+    width: min(72%, 330px);
+    margin: 0 auto;
+  }
+
+  .framed-col .overlap-panel {
+    width: 100%;
+    margin: -24px 0 0;
+    padding: 48px 24px 30px;
+  }
+
+  .qualifications-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .qualifications-grid > .bg-sky,
+  .qualifications-grid > .bg-sky:last-child {
+    min-height: 0;
+    padding: 32px 24px;
+  }
+
+  .photo-overlap {
+    min-height: 500px;
+  }
+
+  .photo-overlap > img {
+    min-height: 500px;
+  }
+
+  .photo-overlap .overlap-panel {
+    top: auto;
+    right: 20px;
+    bottom: 28px;
+    width: calc(100% - 40px);
+    padding: 28px 24px;
+  }
+
+  .qualifications-grid > div:nth-child(3),
+  .qualifications-grid > div:nth-child(3) img {
+    min-height: 400px;
+  }
+
+  .retreat-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card {
+    padding: 2rem 1.5rem 2.5rem;
+    margin: 2rem 1rem 0;
+  }
 }
 
 @media (max-width: 560px) {
-  .footer-grid { grid-template-columns: 1fr; }
-  .retreat-gallery { grid-template-columns: 1fr; }
-  section { padding: 3rem 0; }
-  .droplet { width: 220px; height: 220px; }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .retreat-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+
+  .droplet {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* About page */
+  .about-grid p,
+  .qualifications-grid p,
+  .qualifications-grid li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-grid > .bg-teal {
+    width: calc(100% - 24px);
+    margin: 0 12px;
+  }
+
+  .framed-col {
+    padding-inline: 12px;
+  }
+
+  .framed-col .framed-photo {
+    width: 78%;
+    border-width: 6px;
+  }
+
+  .photo-overlap {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .photo-overlap > img {
+    height: 330px;
+    min-height: 0;
+  }
+
+  .photo-overlap .overlap-panel {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin: 0;
+  }
+
+  .qualifications-grid > div:nth-child(3),
+  .qualifications-grid > div:nth-child(3) img {
+    min-height: 330px;
+  }
 }
