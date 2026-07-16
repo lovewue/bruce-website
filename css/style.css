@@ -95,8 +95,6 @@ section { padding: 4.5rem 0; }
 }
 .header-inner {
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0.5rem 32px;
   display: flex;
   align-items: center;
@@ -160,9 +158,6 @@ section { padding: 4.5rem 0; }
   font-style: italic;
   color: var(--white);
   font-size: 1rem;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 32px;
 }
 .hero-title {
