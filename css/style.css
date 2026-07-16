@@ -160,7 +160,9 @@ section { padding: 4.5rem 0; }
   font-style: italic;
   color: var(--white);
   font-size: 1rem;
-  margin: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0 32px;
 }
 .hero-title {
@@ -518,6 +520,7 @@ textarea { resize: vertical; min-height: 130px; }
   gap: 2.5rem;
   padding-bottom: 3rem;
 }
+.footer-grid > * { min-width: 0; }
 .footer-col h4 {
   color: var(--white);
   font-family: var(--heading-font);
@@ -532,9 +535,10 @@ textarea { resize: vertical; min-height: 130px; }
 .footer-col li a { text-decoration: underline; text-transform: uppercase; letter-spacing: 0.03em; }
 .footer-col a:hover { color: var(--white); }
 .footer-brand { display: flex; gap: 1.2rem; align-items: flex-start; }
+.footer-brand > div { min-width: 0; }
 .footer-brand .logo-mark { width: 70px; height: auto; flex-shrink: 0; }
 .footer-brand h4 { font-size: 1.4rem; text-transform: none; letter-spacing: normal; margin-bottom: 0.6rem; }
-.footer-brand a { text-decoration: underline; }
+.footer-brand a { text-decoration: underline; overflow-wrap: break-word; }
 .footer-brand .meta { margin-top: 1rem; font-size: 0.85rem; opacity: 0.85; }
 .footer-bottom {
   display: flex;
@@ -581,4 +585,14 @@ textarea { resize: vertical; min-height: 130px; }
   .retreat-gallery { grid-template-columns: 1fr; }
   section { padding: 3rem 0; }
   .droplet { width: 220px; height: 220px; }
+
+  .header-inner { padding: 0.4rem 12px; gap: 0.35rem; }
+  .wordmark { font-size: 1.05rem; }
+  .header-right { gap: 0.5rem; }
+  .social-icons { gap: 0.25rem; }
+  .social-icons a { width: 24px; height: 24px; }
+  .social-icons svg { width: 13px; height: 13px; }
+  .header-right .logo-mark { width: 28px; }
+  .nav-toggle { padding: 0.25rem; }
+  .hero-tagline { padding: 0 12px; }
 }
