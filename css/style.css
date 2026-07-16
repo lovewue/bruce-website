@@ -100,7 +100,7 @@ section { padding: 4.5rem 0; }
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 32px;
+  padding: 0.5rem 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -251,9 +251,9 @@ section { padding: 4.5rem 0; }
   position: absolute;
   border-radius: 0 50% 50% 50%;
 }
-.quote-band.light .drop-a { width: 150px; height: 150px; background: #dde9f2; top: 55px; left: 30px; }
-.quote-band.light .drop-b { width: 85px; height: 85px; background: #2d6884; top: -32px; right: 290px; transform: rotate(200deg); }
-.quote-band.light .drop-c { width: 190px; height: 190px; background: #b9dcec; bottom: -55px; right: -30px; transform: rotate(180deg); }
+.quote-band.light .drop-a { width: 150px; height: 150px; background: #dde9f2; top: 40px; left: 30px; }
+.quote-band.light .drop-b { width: 80px; height: 80px; background: #2d6884; top: -38px; right: 300px; transform: rotate(-40deg); }
+.quote-band.light .drop-c { width: 190px; height: 190px; background: #b9dcec; bottom: -50px; right: -50px; }
 
 /* ---------- Home: photo CTA band (Kyparissi) ---------- */
 .photo-cta {
