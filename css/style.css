@@ -183,7 +183,7 @@ section { padding: 4.5rem 0; }
 .split-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .split-cta > div {
   position: relative;
-  min-height: 390px;
+  min-height: 405px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -209,10 +209,10 @@ section { padding: 4.5rem 0; }
   display: grid;
   grid-template-columns: 0.55fr 1fr 1.3fr;
   align-items: stretch;
-  min-height: 390px;
+  min-height: 405px;
 }
 .about-band .col-gradient {
-  background: linear-gradient(to right, var(--navy), var(--teal));
+  background: linear-gradient(to right, var(--navy), var(--white));
 }
 .about-band .col-teal {
   background: var(--teal);
@@ -229,10 +229,10 @@ section { padding: 4.5rem 0; }
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
-.about-band .col-teal p { font-size: 0.85rem; line-height: 1.45; margin-bottom: 0.7em; }
+.about-band .col-teal p { font-size: 1rem; line-height: 1.45; margin-bottom: 0.7em; }
 .about-band .col-teal p.lede { color: var(--white); }
 .about-band .col-teal p.supporting { color: #595959; }
-.about-band .col-teal a { color: var(--white); text-decoration: underline; text-transform: uppercase; font-weight: 700; }
+.about-band .col-teal a { color: #595959; text-decoration: underline; text-transform: uppercase; font-weight: 700; }
 .about-band img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ---------- Quote bands ---------- */
@@ -257,9 +257,9 @@ section { padding: 4.5rem 0; }
   z-index: 2;
   display: block;
 }
-.quote-band.light .drop-a { width: 132px; height: 132px; top: 40px; left: 30px; transform: rotate(-10deg); }
-.quote-band.light .drop-b { width: 85px; height: 85px; opacity: 0.85; top: -30px; right: 300px; transform: rotate(15deg); }
-.quote-band.light .drop-c { width: 170px; height: 170px; bottom: 25px; right: 45px; transform: rotate(10deg); }
+.quote-band.light .drop-a { width: 158px; height: 158px; top: 40px; left: 30px; transform: rotate(-10deg); }
+.quote-band.light .drop-b { width: 102px; height: 102px; opacity: 0.85; top: -30px; right: 300px; transform: rotate(25deg); }
+.quote-band.light .drop-c { width: 204px; height: 204px; bottom: 25px; right: 45px; transform: rotate(10deg); }
 
 /* ---------- Home: photo CTA band (Kyparissi) ---------- */
 .photo-cta {
@@ -274,13 +274,21 @@ section { padding: 4.5rem 0; }
 .photo-cta::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.05) 40%); }
 .photo-cta .label { position: relative; color: var(--white); }
 .photo-cta .label .eyebrow { display: block; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.3em; }
-.photo-cta .label h2 { color: var(--white); margin: 0; }
+.photo-cta .label h2 { color: var(--white); font-weight: 400; margin: 0; }
 
+.retreat-cta-block { position: relative; }
 .photo-cta-band {
   background: var(--white);
   padding: 1.8rem 0;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+.photo-cta-band .btn {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* ---------- Credentials strip ---------- */
