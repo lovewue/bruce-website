@@ -170,6 +170,7 @@ section { padding: 4.5rem 0; }
   color: var(--white);
   font-size: clamp(2rem, 4vw, 2.6rem);
   letter-spacing: 0.02em;
+  text-transform: uppercase;
   margin: 0;
 }
 
@@ -357,10 +358,17 @@ section { padding: 4.5rem 0; }
 .bg-sky { background: var(--sky); }
 .bg-sage { background: var(--sage); }
 
+/* ---------- Service row heading style (Individuals + Organisations) ---------- */
+.service-row .col-panel h3 { text-transform: uppercase; }
+
 /* ---------- Individuals page ---------- */
 #individuals-page .hero-title h1 { color: var(--ink); }
 #individuals-page .service-row { max-width: none; min-height: 420px; }
 #individuals-page .col-drop { background: var(--white); }
+#therapy .droplet { background: #46B1E1; width: 300px; height: 300px; }
+#mindfulness .droplet { background: #C1E5F5; width: 260px; height: 260px; }
+#retreats .droplet { background: #4E95D9; width: 210px; height: 210px; }
+#supervision .droplet { background: #DCEAF7; width: 235px; height: 235px; }
 
 /* ---------- Organisations (compact bullet variant) ---------- */
 .col-panel ul { margin: 0; padding-left: 1.2em; }
@@ -370,6 +378,13 @@ section { padding: 4.5rem 0; }
 #organisations-page .hero-title h1 { color: var(--ink); }
 #organisations-page .service-row { max-width: none; min-height: 420px; }
 #organisations-page .col-drop { background: var(--white); }
+#organisations-page .droplet span { color: var(--white); }
+#training .droplet { background: #5EA6A3; width: 200px; height: 200px; }
+#mental-health .droplet { background: #385A59; width: 235px; height: 235px; }
+#wellbeing .droplet { background: #A7C9B0; width: 265px; height: 265px; }
+#crisis .droplet { background: #457B78; width: 225px; height: 225px; }
+#keynotes .droplet { background: #5EA6A3; width: 200px; height: 200px; }
+#retreats-offsites .droplet { background: #C5DDD2; width: 175px; height: 175px; }
 
 /* ---------- About page ---------- */
 .about-grid {
