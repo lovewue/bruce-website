@@ -183,7 +183,7 @@ section { padding: 4.5rem 0; }
 .split-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .split-cta > div {
   position: relative;
-  min-height: 340px;
+  min-height: 390px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -209,14 +209,15 @@ section { padding: 4.5rem 0; }
   display: grid;
   grid-template-columns: 0.55fr 1fr 1.3fr;
   align-items: stretch;
+  min-height: 390px;
 }
 .about-band .col-gradient {
   background: linear-gradient(to right, var(--navy), var(--teal));
 }
 .about-band .col-teal {
   background: var(--teal);
-  color: #3a3a3a;
-  padding: 3rem;
+  color: var(--white);
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,10 +226,13 @@ section { padding: 4.5rem 0; }
   color: #3a3a3a;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
-.about-band .col-teal p.lede { color: #3a3a3a; }
+.about-band .col-teal p { font-size: 0.85rem; line-height: 1.45; margin-bottom: 0.7em; }
+.about-band .col-teal p.lede { color: var(--white); }
 .about-band .col-teal p.supporting { color: #595959; }
-.about-band .col-teal a { color: #3a3a3a; text-decoration: underline; text-transform: uppercase; font-weight: 700; }
+.about-band .col-teal a { color: var(--white); text-decoration: underline; text-transform: uppercase; font-weight: 700; }
 .about-band img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ---------- Quote bands ---------- */
@@ -249,11 +253,11 @@ section { padding: 4.5rem 0; }
 .quote-band blockquote em { font-style: italic; font-weight: 600; }
 .drop {
   position: absolute;
-  border-radius: 0 50% 50% 50%;
+  display: block;
 }
-.quote-band.light .drop-a { width: 150px; height: 150px; background: #dde9f2; top: 40px; left: 30px; }
-.quote-band.light .drop-b { width: 80px; height: 80px; background: #2d6884; opacity: 0.85; top: -38px; right: 300px; transform: rotate(45deg); }
-.quote-band.light .drop-c { width: 190px; height: 190px; background: #b9dcec; bottom: 25px; right: 45px; }
+.quote-band.light .drop-a { width: 150px; height: 150px; top: 40px; left: 30px; transform: rotate(-5deg); }
+.quote-band.light .drop-b { width: 65px; height: 65px; opacity: 0.85; top: -30px; right: 300px; transform: rotate(10deg); }
+.quote-band.light .drop-c { width: 155px; height: 155px; bottom: 25px; right: 45px; transform: rotate(5deg); }
 
 /* ---------- Home: photo CTA band (Kyparissi) ---------- */
 .photo-cta {
