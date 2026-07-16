@@ -108,7 +108,7 @@ section { padding: 4.5rem 0; }
 }
 .wordmark {
   font-family: var(--heading-font);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 400;
   color: var(--ink);
   flex-shrink: 0;
@@ -207,8 +207,11 @@ section { padding: 4.5rem 0; }
 /* ---------- Home: About Bruce band ---------- */
 .about-band {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.55fr 1fr 1.3fr;
   align-items: stretch;
+}
+.about-band .col-gradient {
+  background: linear-gradient(to right, var(--navy), var(--teal));
 }
 .about-band .col-teal {
   background: var(--teal);
@@ -280,7 +283,9 @@ section { padding: 4.5rem 0; }
   flex-wrap: wrap;
 }
 .credentials-strip img { height: 48px; width: auto; }
-.credentials-gap { background: var(--white); padding: 1.2rem 0; }
+
+/* ---------- Home: spacing between blocks ---------- */
+.home-blocks > * + * { margin-top: 2.5rem; }
 
 /* ---------- Zigzag service rows (Individuals / Organisations) ---------- */
 .service-row {
