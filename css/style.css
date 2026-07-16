@@ -214,8 +214,6 @@ section { padding: 4.5rem 0; }
   grid-template-columns: 0.55fr 1fr 1.3fr;
   align-items: stretch;
   min-height: 405px;
-  max-width: 1600px;
-  margin: 0 auto;
 }
 .about-band .col-gradient {
   background: linear-gradient(to right, var(--navy), var(--white));
@@ -223,11 +221,13 @@ section { padding: 4.5rem 0; }
 .about-band .col-teal {
   background: var(--teal);
   color: var(--white);
-  padding: 1.75rem;
+  padding: 1.75rem clamp(1.75rem, 6vw, 6rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+.about-band .col-teal h2,
+.about-band .col-teal p { max-width: 620px; }
 .about-band .col-teal h2 {
   color: #3a3a3a;
   text-transform: uppercase;
