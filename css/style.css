@@ -215,21 +215,26 @@ section { padding: 4.5rem 0; }
 }
 .about-band .col-teal {
   background: var(--teal);
-  color: var(--white);
+  color: #3a3a3a;
   padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.about-band .col-teal h2 { color: var(--white); }
-.about-band .col-teal a { text-decoration: underline; font-weight: 600; }
+.about-band .col-teal h2 {
+  color: #3a3a3a;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.about-band .col-teal p.lede { color: #3a3a3a; }
+.about-band .col-teal p.supporting { color: #595959; }
+.about-band .col-teal a { color: #3a3a3a; text-decoration: underline; text-transform: uppercase; font-weight: 700; }
 .about-band img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* ---------- Quote bands ---------- */
 .quote-band {
   position: relative;
   text-align: center;
-  overflow: hidden;
 }
 .quote-band.light { background: var(--sky); }
 .quote-band.dark { background: var(--navy); }
@@ -246,9 +251,9 @@ section { padding: 4.5rem 0; }
   position: absolute;
   border-radius: 0 50% 50% 50%;
 }
-.quote-band.light .drop-a { width: 160px; height: 160px; background: #bfe0f0; top: -40px; left: 40px; }
-.quote-band.light .drop-b { width: 110px; height: 110px; background: var(--navy); top: 30px; right: 220px; transform: rotate(90deg); }
-.quote-band.light .drop-c { width: 190px; height: 190px; background: #bfe0f0; bottom: -60px; right: 60px; transform: rotate(180deg); }
+.quote-band.light .drop-a { width: 150px; height: 150px; background: #dde9f2; top: 55px; left: 30px; }
+.quote-band.light .drop-b { width: 85px; height: 85px; background: #2d6884; top: -32px; right: 290px; transform: rotate(200deg); }
+.quote-band.light .drop-c { width: 190px; height: 190px; background: #b9dcec; bottom: -55px; right: -30px; transform: rotate(180deg); }
 
 /* ---------- Home: photo CTA band (Kyparissi) ---------- */
 .photo-cta {
