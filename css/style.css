@@ -393,7 +393,7 @@ section { padding: 4.5rem 0; }
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
 }
-.about-grid > .bg-teal { padding: 2.8rem 20px 10px; margin-top: -383px; position: relative; z-index: 2; }
+.about-grid > .bg-teal { width: 75%; margin-left: 20px; padding: 2.8rem 20px 10px; margin-top: -383px; position: relative; z-index: 2; }
 .about-grid .bg-teal h2 { color: var(--ink); text-transform: uppercase; }
 .about-grid .bg-teal a { color: var(--white); text-decoration: underline; }
 
@@ -409,15 +409,16 @@ section { padding: 4.5rem 0; }
   width: 32.5%;
   box-shadow: var(--shadow);
   display: block;
-  margin-top: -393px;
+  margin-top: -353px;
+  margin-right: 40px;
   position: relative;
   z-index: 3;
 }
 .framed-col .overlap-panel {
-  width: calc(100% + 12px);
+  width: calc(100% + 151px);
   align-self: flex-start;
-  margin-left: -12px;
-  margin-top: 134px;
+  margin-left: -151px;
+  margin-top: 54px;
   position: relative;
   z-index: 2;
   padding: 10px 2.8rem 2.8rem;
@@ -430,6 +431,7 @@ section { padding: 4.5rem 0; }
   grid-template-columns: 1fr 1fr;
 }
 .qualifications-grid > .bg-sky { padding: 2.8rem; }
+.qualifications-grid > .bg-sky:first-child { max-height: 640px; overflow-y: auto; }
 .qualifications-grid ul { padding-left: 1.2em; margin: 0; }
 .qualifications-grid li { margin-bottom: 0.7em; }
 .qualifications-grid h3 { margin-top: 1.6rem; }
@@ -585,11 +587,12 @@ textarea { resize: vertical; min-height: 130px; }
   .split-cta { grid-template-columns: 1fr; }
   .split-cta .tile-inner { text-align: left; margin-left: 0; }
   .about-band, .about-grid, .qualifications-grid, .booking-panel .booking-grid, .service-row, .service-row.alt { grid-template-columns: 1fr; }
+  .about-grid > .bg-teal { width: 100%; margin-left: 0; }
   .service-row .col-drop, .service-row.alt .col-drop { order: 1; }
   .service-row .col-panel, .service-row.alt .col-panel { order: 2; }
   .framed-col { padding: 10px 1.5rem 0; align-items: center; }
-  .framed-col .framed-photo { width: 40%; margin-top: -50px; }
-  .framed-col .overlap-panel { width: 85%; align-self: center; margin-left: 0; margin-top: -20px; padding: 10px 1.6rem 2rem; }
+  .framed-col .framed-photo { width: 40%; margin-top: -50px; margin-right: 0; }
+  .framed-col .overlap-panel { width: 85%; align-self: center; margin-left: 0; margin-top: -8px; padding: 10px 1.6rem 2rem; }
   .photo-overlap > img { height: auto; }
   .photo-overlap .overlap-panel { padding: 2rem 1.6rem; }
   .retreat-gallery { grid-template-columns: 1fr 1fr; }
