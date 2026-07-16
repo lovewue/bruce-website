@@ -186,6 +186,8 @@ section { padding: 4.5rem 0; }
   align-items: stretch;
   padding: 2.5rem;
 }
+.split-cta .individuals { background-position: center bottom; }
+.split-cta .organisations { background-position: center top; }
 .split-cta > div::before { content: ''; position: absolute; inset: 0; }
 .split-cta .individuals::before { background: rgba(42, 102, 128, 0.82); }
 .split-cta .organisations::before { background: none; }
@@ -565,6 +567,10 @@ textarea { resize: vertical; min-height: 130px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .contact-form-card { padding: 2rem 1.5rem 2.5rem; margin: 2rem 1rem 0; }
+
+  .quote-band.light .drop-a { width: 70px; height: 70px; top: -34px; left: 12px; right: auto; bottom: auto; }
+  .quote-band.light .drop-b { width: 46px; height: 46px; top: -26px; right: 18px; left: auto; bottom: auto; }
+  .quote-band.light .drop-c { width: 90px; height: 90px; bottom: -58px; right: 16px; left: auto; top: auto; }
 }
 
 @media (max-width: 560px) {
