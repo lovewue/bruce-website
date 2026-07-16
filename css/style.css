@@ -357,10 +357,19 @@ section { padding: 4.5rem 0; }
 .bg-sky { background: var(--sky); }
 .bg-sage { background: var(--sage); }
 
+/* ---------- Individuals page ---------- */
+#individuals-page .hero-title h1 { color: var(--ink); }
+#individuals-page .service-row { max-width: none; min-height: 420px; }
+#individuals-page .col-drop { background: var(--white); }
+
 /* ---------- Organisations (compact bullet variant) ---------- */
 .col-panel ul { margin: 0; padding-left: 1.2em; }
 .col-panel li { margin-bottom: 0.7em; }
 .col-panel li:last-child { margin-bottom: 0; }
+
+#organisations-page .hero-title h1 { color: var(--ink); }
+#organisations-page .service-row { max-width: none; min-height: 420px; }
+#organisations-page .col-drop { background: var(--white); }
 
 /* ---------- About page ---------- */
 .about-grid {
