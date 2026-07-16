@@ -357,6 +357,7 @@ section { padding: 4.5rem 0; }
 
 .bg-sky { background: var(--sky); }
 .bg-sage { background: var(--sage); }
+.bg-teal { background: var(--teal); color: var(--white); }
 
 /* ---------- Service row heading style (Individuals + Organisations) ---------- */
 .service-row .col-panel h3 { text-transform: uppercase; }
@@ -394,8 +395,7 @@ section { padding: 4.5rem 0; }
   max-width: 1600px;
   margin: 0 auto;
 }
-.about-grid > .bg-teal { padding: 2.8rem; margin-top: -80px; margin-left: 20px; position: relative; z-index: 2; }
-.about-grid .bg-teal { background: var(--teal); color: var(--white); }
+.about-grid > .bg-teal { padding: 2.8rem; margin-top: -383px; margin-left: 20px; position: relative; z-index: 2; }
 .about-grid .bg-teal h2 { color: var(--ink); text-transform: uppercase; }
 .about-grid .bg-teal a { color: var(--white); text-decoration: underline; }
 
@@ -408,16 +408,17 @@ section { padding: 4.5rem 0; }
   align-items: flex-end;
 }
 .framed-col .framed-photo {
-  width: 65%;
-  border: 8px solid var(--white);
+  width: 32.5%;
   box-shadow: var(--shadow);
   display: block;
-  margin-top: -90px;
+  margin-top: -393px;
   position: relative;
   z-index: 3;
 }
 .framed-col .overlap-panel {
-  width: 65%;
+  width: calc(100% + 12px);
+  align-self: flex-start;
+  margin-left: -12px;
   margin-top: -40px;
   position: relative;
   z-index: 2;
@@ -443,11 +444,14 @@ section { padding: 4.5rem 0; }
 
 /* plain photo with large overlapping panel (Who I Work With) */
 .photo-overlap { position: relative; }
-.photo-overlap > img { width: 100%; display: block; }
+.photo-overlap > img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .photo-overlap .overlap-panel {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  right: 0;
+  transform: translateY(-50%);
   z-index: 2;
-  margin-top: -190px;
   padding: 2.6rem 2.8rem;
 }
 .photo-plain img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -589,8 +593,9 @@ textarea { resize: vertical; min-height: 130px; }
   .service-row .col-panel, .service-row.alt .col-panel { order: 2; }
   .framed-col { padding: 10px 1.5rem 0; align-items: center; }
   .framed-col .framed-photo { width: 85%; margin-top: -50px; }
-  .framed-col .overlap-panel { width: 85%; margin-top: -20px; padding: 2.4rem 1.6rem 2rem; }
-  .photo-overlap .overlap-panel { margin-top: -80px; padding: 2rem 1.6rem; }
+  .framed-col .overlap-panel { width: 85%; align-self: center; margin-left: 0; margin-top: -20px; padding: 2.4rem 1.6rem 2rem; }
+  .photo-overlap > img { height: auto; }
+  .photo-overlap .overlap-panel { padding: 2rem 1.6rem; }
   .retreat-gallery { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
