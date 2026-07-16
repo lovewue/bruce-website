@@ -185,14 +185,22 @@ section { padding: 4.5rem 0; }
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
   padding: 2.5rem;
 }
 .split-cta > div::before { content: ''; position: absolute; inset: 0; }
 .split-cta .individuals::before { background: rgba(42, 102, 128, 0.82); }
-.split-cta .organisations::before { background: rgba(73, 144, 172, 0.82); }
-.split-cta .tile-inner { position: relative; margin-left: auto; text-align: right; max-width: 300px; }
-.split-cta ul { list-style: none; margin: 0 0 1.6rem; padding: 0; }
+.split-cta .organisations::before { background: none; }
+.split-cta .tile-inner {
+  position: relative;
+  margin-left: auto;
+  text-align: right;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.split-cta ul { list-style: none; margin: 0; padding: 0; }
 .split-cta li {
   font-family: var(--heading-font);
   font-weight: 400;
@@ -227,7 +235,7 @@ section { padding: 4.5rem 0; }
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
-.about-band .col-teal p { font-size: 1rem; line-height: 1.45; margin-bottom: 0.7em; }
+.about-band .col-teal p { font-size: 1rem; line-height: 1.45; margin-bottom: 0.7em; text-align: justify; }
 .about-band .col-teal p.lede { color: var(--white); }
 .about-band .col-teal p.supporting { color: #595959; }
 .about-band .col-teal a { color: #595959; text-decoration: underline; text-transform: uppercase; font-weight: 700; }
