@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
+  var currentPage = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-item > .nav-link').forEach(function (link) {
+    var linkPage = link.getAttribute('href').split('/').pop();
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+  });
+
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.main-nav');
 
@@ -9,18 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
       toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
     });
   }
-
-  document.querySelectorAll('.nav-item > .nav-link').forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      if (window.innerWidth <= 900) {
-        var item = link.closest('.nav-item');
-        if (item.querySelector('.mega')) {
-          e.preventDefault();
-          item.classList.toggle('open');
-        }
-      }
-    });
-  });
 
   var form = document.querySelector('.contact-form');
   if (form) {
