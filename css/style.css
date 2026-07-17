@@ -445,9 +445,9 @@ section { padding: 4.5rem 0; }
 .framed-col .overlap-panel h2 { text-transform: uppercase; }
 
 .qualifications-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px 1fr;
 }
 .qualifications-grid > .bg-sky { padding: 20px; }
 .qualifications-grid > .bg-sky:first-child { max-height: 500px; overflow-y: auto; }
@@ -478,7 +478,10 @@ section { padding: 4.5rem 0; }
   z-index: 2;
   padding: 20px;
 }
-.photo-plain { position: relative; }
+.photo-plain {
+    position: relative;
+    min-height: 450px;
+}
 .photo-plain img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .logo-strip { display: flex; gap: 2rem; margin-top: 1.2rem; flex-wrap: wrap; align-items: center; }
 .logo-strip img { height: 30px; width: auto; }
