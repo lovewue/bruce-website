@@ -410,7 +410,7 @@ section { padding: 4.5rem 0; }
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
 }
-.about-grid > .bg-teal { width: 75%; margin-left: 20px; padding: 2.8rem 20px 10px; margin-top: -383px; position: relative; z-index: 2; }
+.about-grid > .bg-teal { width: 75%; margin-left: 20px; padding: 20px; margin-top: -383px; position: relative; z-index: 2; }
 .about-grid .bg-teal h2 { color: var(--ink); text-transform: uppercase; }
 .about-grid .bg-teal a { color: var(--white); text-decoration: underline; }
 
@@ -439,7 +439,7 @@ section { padding: 4.5rem 0; }
   margin-top: 54px;
   position: relative;
   z-index: 2;
-  padding: 10px 20px 2.8rem;
+  padding: 20px;
   color: var(--ink);
 }
 .framed-col .overlap-panel h2 { text-transform: uppercase; }
@@ -447,9 +447,9 @@ section { padding: 4.5rem 0; }
 .qualifications-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px 495px;
+  grid-template-rows: 500px auto;
 }
-.qualifications-grid > .bg-sky { padding: 2.8rem 20px; }
+.qualifications-grid > .bg-sky { padding: 20px; }
 .qualifications-grid > .bg-sky:first-child { max-height: 500px; overflow-y: auto; }
 .qualifications-grid ul { padding-left: 1.2em; margin: 0; }
 .qualifications-grid li { margin-bottom: 0.7em; }
@@ -476,7 +476,7 @@ section { padding: 4.5rem 0; }
   right: 0;
   transform: translateY(-50%);
   z-index: 2;
-  padding: 2.6rem 20px;
+  padding: 20px;
 }
 .photo-plain { position: relative; }
 .photo-plain img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
@@ -623,8 +623,8 @@ textarea { resize: vertical; min-height: 130px; }
   .service-row .col-panel, .service-row.alt .col-panel { order: 2; }
   .framed-col { padding: 10px 1.5rem 0; align-items: center; }
   .framed-col .framed-photo { width: 40%; margin-top: 20px; margin-right: 0; }
-  .framed-col .overlap-panel { width: calc(100% + 48px); align-self: flex-start; margin-left: -24px; margin-top: -8px; padding: 10px 20px 2rem; }
-  .photo-overlap .overlap-panel { padding: 2rem 20px; }
+  .framed-col .overlap-panel { width: calc(100% + 48px); align-self: flex-start; margin-left: -24px; margin-top: -8px; padding: 20px; }
+  .photo-overlap .overlap-panel { padding: 20px; }
   .retreat-gallery { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
