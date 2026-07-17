@@ -414,7 +414,7 @@ section { padding: 4.5rem 0; }
 .about-grid > .bg-teal {
   width: 75%;
   margin-left: 20px;
-  padding: 20px 40px;
+  padding: 100px 100px 20px;
   margin-top: -383px;
   margin-bottom: 10px;
   position: relative;
@@ -465,7 +465,7 @@ section { padding: 4.5rem 0; }
   margin-top: 54px;
   position: relative;
   z-index: 2;
-  padding: 20px 100px;
+  padding: 100px 100px 20px;
   color: var(--ink);
 }
 
@@ -480,7 +480,7 @@ section { padding: 4.5rem 0; }
 }
 
 .qualifications-grid > .bg-sky {
-  padding: 20px 100px;
+  padding: 100px 100px 20px;
 }
 
 .qualifications-grid > .bg-sky:first-child {
@@ -561,7 +561,7 @@ section { padding: 4.5rem 0; }
   right: 0;
   transform: translateY(-50%);
   z-index: 2;
-  padding: 20px 100px;
+  padding: 100px 100px 20px;
 }
 
 .photo-plain {
