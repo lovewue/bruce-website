@@ -417,6 +417,7 @@ section { padding: 4.5rem 0; }
 .framed-col .overlap-panel {
   width: calc(100% + 63px);
   align-self: flex-start;
+  flex: 1;
   margin-left: -32px;
   margin-top: 54px;
   position: relative;
@@ -437,6 +438,13 @@ section { padding: 4.5rem 0; }
 .qualifications-grid li { margin-bottom: 0.7em; }
 .qualifications-grid h3 { margin-top: 1.6rem; }
 .qualifications-grid h3:first-child { margin-top: 0; }
+
+@media (min-width: 901px) and (max-width: 1300px) {
+  .qualifications-grid > .bg-sky:first-child h3 { font-size: 1.1rem; margin-top: 1.2rem; }
+  .qualifications-grid > .bg-sky:first-child li,
+  .qualifications-grid > .bg-sky:first-child p { font-size: 0.85rem; line-height: 1.45; }
+  .qualifications-grid > .bg-sky:first-child li { margin-bottom: 0.5em; }
+}
 .badge-row { display: flex; gap: 1.6rem; margin-top: 1.4rem; align-items: center; flex-wrap: wrap; }
 .badge-row img { height: 52px; width: auto; }
 .org-list { margin-top: 0.5rem; }
