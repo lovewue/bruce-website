@@ -414,7 +414,7 @@ section { padding: 4.5rem 0; }
 .about-grid > .bg-teal {
   width: 75%;
   margin-left: 20px;
-  padding: 20px;
+  padding: 20px 40px;
   margin-top: -383px;
   position: relative;
   z-index: 2;
@@ -457,7 +457,7 @@ section { padding: 4.5rem 0; }
   margin-top: 54px;
   position: relative;
   z-index: 2;
-  padding: 20px;
+  padding: 20px 40px;
   color: var(--ink);
 }
 
@@ -472,7 +472,7 @@ section { padding: 4.5rem 0; }
 }
 
 .qualifications-grid > .bg-sky {
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .qualifications-grid > .bg-sky:first-child {
@@ -553,7 +553,7 @@ section { padding: 4.5rem 0; }
   right: 0;
   transform: translateY(-50%);
   z-index: 2;
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .photo-plain {
@@ -727,8 +727,8 @@ textarea { resize: vertical; min-height: 130px; }
   .service-row .col-panel, .service-row.alt .col-panel { order: 2; }
   .framed-col { padding: 10px 1.5rem 0; align-items: center; }
   .framed-col .framed-photo { width: 40%; margin-top: 20px; margin-right: 0; }
-  .framed-col .overlap-panel { width: calc(100% + 48px); align-self: flex-start; margin-left: -24px; margin-top: -8px; padding: 20px; }
-  .photo-overlap .overlap-panel { padding: 20px; }
+  .framed-col .overlap-panel { width: calc(100% + 48px); align-self: flex-start; margin-left: -24px; margin-top: -8px; padding: 20px 40px; }
+  .photo-overlap .overlap-panel { padding: 20px 40px; }
   .retreat-gallery { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
