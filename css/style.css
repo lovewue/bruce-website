@@ -68,9 +68,20 @@ p { margin: 0 0 1em; }
 section { padding: 4.5rem 0; }
 .section-tight { padding: 2.5rem 0; }
 
+/* ---------- Legal pages (Privacy Policy, Terms & Conditions) ---------- */
+.legal-page .container { max-width: 760px; }
+.legal-updated { color: var(--ink-muted); font-style: italic; margin-bottom: 2rem; }
+.legal-page h3 { margin-top: 2.2rem; text-transform: none; letter-spacing: normal; }
+.legal-page h3:first-of-type { margin-top: 0; }
+.legal-page ul { padding-left: 1.2em; margin: 0 0 1em; }
+.legal-page li { margin-bottom: 0.6em; }
+.legal-page p { line-height: 1.6; }
+.legal-page a { text-decoration: underline; }
+
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5em;
   padding: 0.75em 1.9em;
   font-family: var(--heading-font);
@@ -78,6 +89,8 @@ section { padding: 4.5rem 0; }
   font-size: 0.85rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
   border: 2px solid var(--ink);
   cursor: pointer;
   background: var(--white);
@@ -140,7 +153,10 @@ section { padding: 4.5rem 0; }
 .header-right .logo-mark { width: 46px; height: auto; }
 
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.4rem; }
-.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--ink); margin: 5px 0; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--ink); margin: 5px 0; transition: transform 0.25s ease, opacity 0.25s ease; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(12px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-12px) rotate(-45deg); }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -208,6 +224,7 @@ section { padding: 4.5rem 0; }
   font-size: 14.7px;
   margin-bottom: 0.5em;
 }
+.split-cta li a { display: block; }
 
 /* ---------- Home: About Bruce band ---------- */
 .about-band {
@@ -436,7 +453,7 @@ section { padding: 4.5rem 0; }
 .qualifications-grid > .bg-sky:first-child { max-height: 500px; overflow-y: auto; }
 .qualifications-grid ul { padding-left: 1.2em; margin: 0; }
 .qualifications-grid li { margin-bottom: 0.7em; }
-.qualifications-grid h3 { margin-top: 1.6rem; }
+.qualifications-grid h3 { margin-top: 1.6rem; text-transform: uppercase; }
 .qualifications-grid h3:first-child { margin-top: 0; }
 
 @media (min-width: 901px) and (max-width: 1300px) {
@@ -462,7 +479,7 @@ section { padding: 4.5rem 0; }
   padding: 2.6rem 2.8rem;
 }
 .photo-plain { position: relative; }
-.photo-plain img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-plain img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .logo-strip { display: flex; gap: 2rem; margin-top: 1.2rem; flex-wrap: wrap; align-items: center; }
 .logo-strip img { height: 30px; width: auto; }
 
