@@ -601,18 +601,21 @@ textarea { resize: vertical; min-height: 130px; }
   .qualifications-grid { grid-template-rows: none; grid-auto-rows: auto; }
   .qualifications-grid > .bg-sky:first-child { max-height: none; overflow-y: visible; }
   .photo-plain { min-height: 260px; }
-  .photo-overlap { display: flex; flex-direction: column; min-height: 0; }
+  .photo-overlap { min-height: 580px; }
   .service-row .col-drop, .service-row.alt .col-drop { order: 1; }
   .service-row .col-panel, .service-row.alt .col-panel { order: 2; }
   .framed-col { padding: 10px 1.5rem 0; align-items: center; }
   .framed-col .framed-photo { width: 40%; margin-top: 20px; margin-right: 0; }
   .framed-col .overlap-panel { width: calc(100% + 48px); align-self: flex-start; margin-left: -24px; margin-top: -8px; padding: 10px 1.6rem 2rem; }
-  .photo-overlap > img { position: static; height: 220px; order: 1; }
-  .photo-overlap .overlap-panel { position: static; transform: none; left: auto; right: auto; order: 2; padding: 2rem 1.6rem; }
+  .photo-overlap .overlap-panel { padding: 2rem 1.6rem; }
   .retreat-gallery { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .contact-form-card { padding: 2rem 1.5rem 2.5rem; margin: 2rem 1rem 0; }
+
+  @media (min-width: 561px) {
+    .footer-brand a { font-size: 0.82rem; }
+  }
 
   .quote-band.light .drop-a { width: 70px; height: 70px; top: -34px; left: 12px; right: auto; bottom: auto; }
   .quote-band.light .drop-b { width: 46px; height: 46px; top: -26px; right: 18px; left: auto; bottom: auto; }
