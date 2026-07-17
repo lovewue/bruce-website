@@ -447,7 +447,7 @@ section { padding: 4.5rem 0; }
 .qualifications-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px auto;
+  grid-template-rows: 500px 500px;
 }
 .qualifications-grid > .bg-sky { padding: 20px; }
 .qualifications-grid > .bg-sky:first-child { max-height: 500px; overflow-y: auto; }
