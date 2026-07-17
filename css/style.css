@@ -465,7 +465,7 @@ section { padding: 4.5rem 0; }
   margin-top: 54px;
   position: relative;
   z-index: 2;
-  padding: 20px 40px;
+  padding: 20px 100px;
   color: var(--ink);
 }
 
@@ -480,7 +480,7 @@ section { padding: 4.5rem 0; }
 }
 
 .qualifications-grid > .bg-sky {
-  padding: 20px 40px;
+  padding: 20px 100px;
 }
 
 .qualifications-grid > .bg-sky:first-child {
@@ -561,7 +561,7 @@ section { padding: 4.5rem 0; }
   right: 0;
   transform: translateY(-50%);
   z-index: 2;
-  padding: 20px 40px;
+  padding: 20px 100px;
 }
 
 .photo-plain {
@@ -642,21 +642,22 @@ section { padding: 4.5rem 0; }
 .contact-hero {
   position: relative;
   background-size: cover;
-  background-position: center;
+  background-position: center 100%;
   padding-top: 1.6rem;
-  min-height: 480px;
+  height: 640px;
   display: flex;
   flex-direction: column;
 }
 .contact-form-card {
   position: relative;
   background: var(--white);
-  max-width: 900px;
-  margin: 3rem auto 0;
+  width: 100%;
+  max-width: 1000px;
+  margin: 220px auto 0;
   padding: 2.5rem 3rem 3rem;
   box-shadow: var(--shadow);
 }
-.contact-form-card h1 { text-align: center; }
+.contact-form-card h1 { text-align: center; text-transform: uppercase; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 .form-field { margin-bottom: 1.3rem; }
 label { display: block; font-size: 0.88rem; margin-bottom: 0.4em; }
@@ -740,7 +741,7 @@ textarea { resize: vertical; min-height: 130px; }
   .retreat-gallery { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
-  .contact-form-card { padding: 2rem 1.5rem 2.5rem; margin: 2rem 1rem 0; }
+  .contact-form-card { width: calc(100% - 2rem); padding: 2rem 1.5rem 2.5rem; margin: 300px 1rem 0; }
 
   .quote-band.light .drop-a { width: 70px; height: 70px; top: -34px; left: 12px; right: auto; bottom: auto; }
   .quote-band.light .drop-b { width: 46px; height: 46px; top: -26px; right: 18px; left: auto; bottom: auto; }
