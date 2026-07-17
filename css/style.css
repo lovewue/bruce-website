@@ -450,7 +450,7 @@ section { padding: 4.5rem 0; }
     grid-template-rows: 500px 1fr;
 }
 .qualifications-grid > .bg-sky { padding: 20px; }
-.qualifications-grid > .bg-sky:first-child { max-height: 500px; overflow-y: auto; }
+.qualifications-grid > .bg-sky { max-height: 500px; overflow-y: auto; }
 .qualifications-grid ul { padding-left: 1.2em; margin: 0; }
 .qualifications-grid li { margin-bottom: 0.7em; }
 .qualifications-grid h3 { margin-top: 1.6rem; text-transform: uppercase; }
