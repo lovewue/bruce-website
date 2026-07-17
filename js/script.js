@@ -56,20 +56,4 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
-
-  var myStory = document.querySelector('.framed-col .overlap-panel');
-  var qualGrid = document.querySelector('.qualifications-grid');
-  if (myStory && qualGrid && qualGrid.children.length >= 4) {
-    var row2Cells = [qualGrid.children[2], qualGrid.children[3]];
-    var syncQualificationsRowHeight = function () {
-      if (window.innerWidth <= 900) {
-        row2Cells.forEach(function (c) { c.style.height = ''; });
-        return;
-      }
-      var h = myStory.getBoundingClientRect().height;
-      row2Cells.forEach(function (c) { c.style.height = h + 'px'; });
-    };
-    syncQualificationsRowHeight();
-    window.addEventListener('resize', syncQualificationsRowHeight);
-  }
 });

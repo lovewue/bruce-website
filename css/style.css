@@ -468,25 +468,16 @@ section { padding: 4.5rem 0; }
 .qualifications-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px auto;
-  align-items: stretch;
+  grid-template-rows: 500px 500px;
 }
 
 .qualifications-grid > .bg-sky {
   padding: 20px;
-  box-sizing: border-box;
 }
 
 .qualifications-grid > .bg-sky:first-child {
   max-height: 500px;
   overflow-y: auto;
-}
-
-.qualifications-grid > .bg-sky:last-child {
-  max-height: none;
-  overflow: visible;
-  height: 100%;
-  align-self: stretch;
 }
 
 .qualifications-grid ul {
@@ -567,7 +558,6 @@ section { padding: 4.5rem 0; }
 
 .photo-plain {
   position: relative;
-  min-height: 450px;
 }
 
 .photo-plain img {
@@ -700,7 +690,7 @@ textarea { resize: vertical; min-height: 130px; }
 .footer-brand > div { min-width: 0; }
 .footer-brand .logo-mark { width: 70px; height: auto; flex-shrink: 0; }
 .footer-brand h4 { font-size: 1.4rem; text-transform: none; letter-spacing: normal; margin-bottom: 0.6rem; }
-.footer-brand a { text-decoration: underline; overflow-wrap: break-word; }
+.footer-brand a { text-decoration: underline; overflow-wrap: break-word; font-size: 0.82rem; }
 .footer-brand .meta { margin-top: 1rem; font-size: 0.85rem; opacity: 0.85; }
 .footer-bottom {
   display: flex;
@@ -743,10 +733,6 @@ textarea { resize: vertical; min-height: 130px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .contact-form-card { padding: 2rem 1.5rem 2.5rem; margin: 2rem 1rem 0; }
-
-  @media (min-width: 561px) {
-    .footer-brand a { font-size: 0.82rem; }
-  }
 
   .quote-band.light .drop-a { width: 70px; height: 70px; top: -34px; left: 12px; right: auto; bottom: auto; }
   .quote-band.light .drop-b { width: 46px; height: 46px; top: -26px; right: 18px; left: auto; bottom: auto; }
