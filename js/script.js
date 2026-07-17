@@ -22,10 +22,38 @@ document.addEventListener('DOMContentLoaded', function () {
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var status = form.querySelector('.form-status');
-      if (status) {
-        status.textContent = 'Thanks — this form is not yet connected to an email service, so please also reach out directly via bruce@brucegreenhalgh.com until it is.';
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
       }
+
+      var status = form.querySelector('.form-status');
+      var submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      if (status) status.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          form.reset();
+          if (status) status.textContent = 'Thanks — your message has been sent. Bruce will get back to you soon.';
+        } else {
+          return response.json().then(function (data) {
+            var message = (data && data.errors && data.errors.length)
+              ? data.errors.map(function (err) { return err.message; }).join(', ')
+              : 'Sorry, something went wrong sending your message. Please email bruce@brucegreenhalgh.com directly.';
+            if (status) status.textContent = message;
+          });
+        }
+      }).catch(function () {
+        if (status) status.textContent = 'Sorry, something went wrong sending your message. Please email bruce@brucegreenhalgh.com directly.';
+      }).finally(function () {
+        submitBtn.disabled = false;
+      });
     });
   }
 
