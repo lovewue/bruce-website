@@ -606,7 +606,7 @@ textarea { resize: vertical; min-height: 130px; }
   .service-row .col-panel, .service-row.alt .col-panel { order: 2; }
   .framed-col { padding: 10px 1.5rem 0; align-items: center; }
   .framed-col .framed-photo { width: 40%; margin-top: 20px; margin-right: 0; }
-  .framed-col .overlap-panel { width: 100%; align-self: center; margin-left: 0; margin-top: -8px; padding: 10px 1.6rem 2rem; }
+  .framed-col .overlap-panel { width: calc(100% + 48px); align-self: flex-start; margin-left: -24px; margin-top: -8px; padding: 10px 1.6rem 2rem; }
   .photo-overlap > img { position: static; height: 220px; order: 1; }
   .photo-overlap .overlap-panel { position: static; transform: none; left: auto; right: auto; order: 2; padding: 2rem 1.6rem; }
   .retreat-gallery { grid-template-columns: 1fr 1fr; }
