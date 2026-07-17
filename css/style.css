@@ -651,7 +651,7 @@ section { padding: 4.5rem 0; }
   background: var(--white);
   width: 100%;
   max-width: 1000px;
-  margin: -90px auto 0;
+  margin: -190px auto 100px;
   padding: 2.5rem 3rem 3rem;
   box-shadow: var(--shadow);
 }
@@ -739,7 +739,7 @@ textarea { resize: vertical; min-height: 130px; }
   .retreat-gallery { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
-  .contact-form-card { width: calc(100% - 2rem); padding: 2rem 1.5rem 2.5rem; margin: -60px 1rem 0; }
+  .contact-form-card { width: calc(100% - 2rem); padding: 2rem 1.5rem 2.5rem; margin: -160px 1rem 100px; }
 
   .quote-band.light .drop-a { width: 70px; height: 70px; top: -34px; left: 12px; right: auto; bottom: auto; }
   .quote-band.light .drop-b { width: 46px; height: 46px; top: -26px; right: 18px; left: auto; bottom: auto; }
