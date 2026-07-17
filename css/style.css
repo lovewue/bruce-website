@@ -71,7 +71,16 @@ section { padding: 4.5rem 0; }
 /* ---------- Legal pages (Privacy Policy, Terms & Conditions) ---------- */
 .legal-page .container { max-width: 760px; }
 .legal-updated { color: var(--ink-muted); font-style: italic; margin-bottom: 2rem; }
-.legal-page h3 { margin-top: 2.2rem; text-transform: none; letter-spacing: normal; }
+.legal-page h1,
+.legal-page h3 {
+  background: var(--navy);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.7em 1em;
+}
+.legal-page h1 { font-size: 1.8rem; }
+.legal-page h3 { font-size: 1.1rem; margin-top: 2.2rem; }
 .legal-page h3:first-of-type { margin-top: 0; }
 .legal-page ul { padding-left: 1.2em; margin: 0 0 1em; }
 .legal-page li { margin-bottom: 0.6em; }
@@ -506,20 +515,20 @@ section { padding: 4.5rem 0; }
   margin-top: 0;
 }
 
-@media (min-width: 901px) and (max-width: 1300px) {
+@media (min-width: 901px) {
   .qualifications-grid > .bg-sky:first-child h3 {
-    font-size: 1.1rem;
-    margin-top: 1.2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
   }
 
   .qualifications-grid > .bg-sky:first-child li,
   .qualifications-grid > .bg-sky:first-child p {
-    font-size: 0.85rem;
-    line-height: 1.45;
+    font-size: 0.75rem;
+    line-height: 1.35;
   }
 
   .qualifications-grid > .bg-sky:first-child li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
   }
 }
 
@@ -713,6 +722,24 @@ textarea { resize: vertical; min-height: 130px; }
 .footer-bottom a:hover { text-decoration: underline; }
 
 /* ---------- Responsive ---------- */
+/* About page: stack to full-width earlier than the general mobile
+   breakpoint, since the two-column grid gets squeezed narrow enough
+   in the 900-1150px tablet range to force excessive text wrapping
+   (and, via grid stretch/flex:1, that height growth carries over
+   into the My Story panel too). */
+@media (max-width: 1150px) {
+  .about-grid, .qualifications-grid { grid-template-columns: 1fr; }
+  .about-grid > .bg-teal { width: 100%; margin-left: 0; }
+  .qualifications-grid { grid-template-rows: none; grid-auto-rows: auto; }
+  .qualifications-grid > .bg-sky:first-child { max-height: none; overflow-y: visible; }
+  .photo-plain { min-height: 260px; }
+  .photo-overlap { min-height: 580px; }
+  .framed-col { padding: 10px 1.5rem 0; align-items: center; }
+  .framed-col .framed-photo { width: 40%; margin-top: 20px; margin-right: 0; }
+  .framed-col .overlap-panel { width: calc(100% + 48px); align-self: flex-start; margin-left: -24px; margin-top: -8px; padding: 20px 40px; }
+  .photo-overlap .overlap-panel { padding: 20px 40px; }
+}
+
 @media (max-width: 900px) {
   .main-nav { position: fixed; inset: 0 0 0 auto; width: min(320px, 85vw); background: var(--white); flex-direction: column; align-items: flex-start; padding: 5.5rem 1.8rem 2rem; box-shadow: -12px 0 30px rgba(0,0,0,0.15); transform: translateX(100%); transition: transform 0.3s ease; z-index: 90; }
   .main-nav.open { transform: translateX(0); }
@@ -724,18 +751,9 @@ textarea { resize: vertical; min-height: 130px; }
   .split-cta .tile-inner { text-align: left; margin-left: 0; }
   .retreat-title-row { flex-wrap: wrap; }
   .retreat-title-band .dates { text-align: left; flex-basis: 100%; }
-  .about-band, .about-grid, .qualifications-grid, .booking-panel .booking-grid, .service-row, .service-row.alt { grid-template-columns: 1fr; }
-  .about-grid > .bg-teal { width: 100%; margin-left: 0; }
-  .qualifications-grid { grid-template-rows: none; grid-auto-rows: auto; }
-  .qualifications-grid > .bg-sky:first-child { max-height: none; overflow-y: visible; }
-  .photo-plain { min-height: 260px; }
-  .photo-overlap { min-height: 580px; }
+  .about-band, .booking-panel .booking-grid, .service-row, .service-row.alt { grid-template-columns: 1fr; }
   .service-row .col-drop, .service-row.alt .col-drop { order: 1; padding: 10px 0; }
   .service-row .col-panel, .service-row.alt .col-panel { order: 2; }
-  .framed-col { padding: 10px 1.5rem 0; align-items: center; }
-  .framed-col .framed-photo { width: 40%; margin-top: 20px; margin-right: 0; }
-  .framed-col .overlap-panel { width: calc(100% + 48px); align-self: flex-start; margin-left: -24px; margin-top: -8px; padding: 20px 40px; }
-  .photo-overlap .overlap-panel { padding: 20px 40px; }
   .retreat-gallery { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
