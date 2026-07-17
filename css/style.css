@@ -596,7 +596,7 @@ textarea { resize: vertical; min-height: 130px; }
   .service-row .col-drop, .service-row.alt .col-drop { order: 1; }
   .service-row .col-panel, .service-row.alt .col-panel { order: 2; }
   .framed-col { padding: 10px 1.5rem 0; align-items: center; }
-  .framed-col .framed-photo { width: 40%; margin-top: -50px; margin-right: 0; }
+  .framed-col .framed-photo { width: 40%; margin-top: 20px; margin-right: 0; }
   .framed-col .overlap-panel { width: 85%; align-self: center; margin-left: 0; margin-top: -8px; padding: 10px 1.6rem 2rem; }
   .photo-overlap > img { height: auto; }
   .photo-overlap .overlap-panel { padding: 2rem 1.6rem; }
