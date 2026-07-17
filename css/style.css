@@ -416,6 +416,7 @@ section { padding: 4.5rem 0; }
   margin-left: 20px;
   padding: 20px 40px;
   margin-top: -383px;
+  margin-bottom: 10px;
   position: relative;
   z-index: 2;
 }
@@ -428,6 +429,13 @@ section { padding: 4.5rem 0; }
 .about-grid .bg-teal a {
   color: var(--white);
   text-decoration: underline;
+}
+
+.about-grid .bg-teal p,
+.framed-col .overlap-panel p,
+.qualifications-grid p,
+.photo-overlap .overlap-panel p {
+  text-align: justify;
 }
 
 /* framed photo + overlapping panel (My Story) */
