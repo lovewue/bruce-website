@@ -71,16 +71,21 @@ section { padding: 4.5rem 0; }
 /* ---------- Legal pages (Privacy Policy, Terms & Conditions) ---------- */
 .legal-page .container { max-width: 760px; }
 .legal-updated { color: var(--ink-muted); font-style: italic; margin-bottom: 2rem; }
-.legal-page h1,
-.legal-page h3 {
+.legal-page h1 {
   background: var(--navy);
   color: var(--white);
   text-transform: uppercase;
   letter-spacing: 0.03em;
   padding: 0.7em 1em;
+  font-size: 1.8rem;
 }
-.legal-page h1 { font-size: 1.8rem; }
-.legal-page h3 { font-size: 1.1rem; margin-top: 2.2rem; }
+.legal-page h3 {
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 1.1rem;
+  margin-top: 2.2rem;
+}
 .legal-page h3:first-of-type { margin-top: 0; }
 .legal-page ul { padding-left: 1.2em; margin: 0 0 1em; }
 .legal-page li { margin-bottom: 0.6em; }
