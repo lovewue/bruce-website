@@ -491,7 +491,7 @@ section { padding: 4.5rem 0; }
 .qualifications-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 500px 500px;
+  grid-template-rows: 575px 575px;
 }
 
 .qualifications-grid > .bg-sky {
@@ -499,7 +499,7 @@ section { padding: 4.5rem 0; }
 }
 
 .qualifications-grid > .bg-sky:first-child {
-  max-height: 500px;
+  max-height: 575px;
   overflow-y: auto;
 }
 
@@ -519,23 +519,6 @@ section { padding: 4.5rem 0; }
 
 .qualifications-grid h3:first-child {
   margin-top: 0;
-}
-
-@media (min-width: 901px) {
-  .qualifications-grid > .bg-sky:first-child h3 {
-    font-size: 1rem;
-    margin-top: 1rem;
-  }
-
-  .qualifications-grid > .bg-sky:first-child li,
-  .qualifications-grid > .bg-sky:first-child p {
-    font-size: 0.75rem;
-    line-height: 1.35;
-  }
-
-  .qualifications-grid > .bg-sky:first-child li {
-    margin-bottom: 0.4em;
-  }
 }
 
 .badge-row {
