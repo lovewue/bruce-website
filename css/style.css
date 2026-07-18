@@ -735,8 +735,9 @@ textarea { resize: vertical; min-height: 130px; }
    into the My Story panel too). */
 @media (max-width: 1150px) {
   .about-grid, .qualifications-grid { grid-template-columns: 1fr; }
-  .about-grid > .bg-teal { width: 100%; margin-left: 0; }
+  .about-grid > .bg-teal { width: 100%; margin-left: 0; padding: 20px 40px; }
   .qualifications-grid { grid-template-rows: none; grid-auto-rows: auto; }
+  .qualifications-grid > .bg-sky { padding: 20px 40px; }
   .qualifications-grid > .bg-sky:first-child { max-height: none; overflow-y: visible; }
   .photo-plain { min-height: 260px; }
   .photo-overlap { min-height: 580px; }
