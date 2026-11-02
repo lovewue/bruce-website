@@ -770,3 +770,38 @@ textarea { resize: vertical; min-height: 130px; }
   .nav-toggle { padding: 0.25rem; }
   .hero-tagline { padding: 0 12px; }
 }
+
+/* ---------- Photo droplets (Individuals / Organisations) ---------- */
+.droplet.photo { padding: 0; overflow: hidden; background: var(--grey-bg); box-shadow: 0 10px 28px rgba(0,0,0,0.12); }
+.droplet.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+#therapy .droplet.photo { width: 340px; height: 340px; }
+#mindfulness .droplet.photo { width: 300px; height: 300px; }
+#retreats .droplet.photo { width: 320px; height: 320px; }
+#supervision .droplet.photo { width: 310px; height: 310px; }
+#training .droplet.photo { width: 300px; height: 300px; }
+#mental-health .droplet.photo { width: 330px; height: 330px; }
+#wellbeing .droplet.photo { width: 310px; height: 310px; }
+#crisis .droplet.photo { width: 300px; height: 300px; }
+#keynotes .droplet.photo { width: 330px; height: 330px; }
+#retreats-offsites .droplet.photo { width: 300px; height: 300px; }
+@media (max-width: 560px) {
+  #individuals-page .service-row .droplet.photo,
+  #organisations-page .service-row .droplet.photo { width: 260px; height: 260px; }
+}
+
+/* ---------- In-text links to the Retreats page ---------- */
+a.retreat-link { color: inherit; text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a.retreat-link:hover { color: var(--navy); }
+.photo-cta a.retreat-link:hover { color: var(--white); opacity: 0.85; }
+
+/* ---------- Six-item menu: tighten, then switch to burger earlier ---------- */
+@media (max-width: 1280px) {
+  .main-nav > ul { gap: 1.4rem; }
+}
+@media (max-width: 1180px) {
+  .main-nav { position: fixed; inset: 0 0 0 auto; left: auto; width: min(320px, 85vw); background: var(--white); flex-direction: column; align-items: flex-start; padding: 5.5rem 1.8rem 2rem; box-shadow: -12px 0 30px rgba(0,0,0,0.15); transform: translateX(100%); transition: transform 0.3s ease; z-index: 90; }
+  .main-nav.open { transform: translateX(0); }
+  .main-nav > ul { flex-direction: column; gap: 0.3rem; width: 100%; }
+  .nav-item { width: 100%; }
+  .nav-toggle { display: block; }
+}
