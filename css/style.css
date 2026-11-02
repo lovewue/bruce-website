@@ -790,8 +790,8 @@ textarea { resize: vertical; min-height: 130px; }
 }
 
 /* ---------- In-text links to the Retreats page ---------- */
-a.retreat-link { color: inherit; text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: 3px; }
-a.retreat-link:hover { color: var(--navy); }
+a.retreat-link { color: inherit; text-decoration: none; }
+a.retreat-link:hover { text-decoration: underline; text-decoration-color: var(--orange); text-underline-offset: 3px; }
 .photo-cta a.retreat-link:hover { color: var(--white); opacity: 0.85; }
 
 /* ---------- Six-item menu: tighten, then switch to burger earlier ---------- */
