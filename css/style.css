@@ -392,7 +392,7 @@ section { padding: 4.5rem 0; }
 .bg-teal { background: var(--teal); color: var(--white); }
 
 /* ---------- Service row heading style (Individuals + Organisations) ---------- */
-.service-row .col-panel h3 { text-transform: uppercase; }
+.service-row .col-panel h3 { text-transform: uppercase; margin: 0 0 1.1rem; }
 
 /* ---------- Individuals page ---------- */
 #individuals-page .hero-title h1 { color: var(--ink); }
